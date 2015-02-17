@@ -6,7 +6,7 @@ todoApp.controller('TodoCtrl', ['$rootScope', '$scope', '$filter', 'ApiSrv', fun
 	 $scope.newTodo = {content:''};
 	 $scope.newUser= {username:'', c_name:''};
 	 $scope.newVote= {school_name:'', vote_title:'', vote_amount:0, start_at:'2015-02-11 03:00:00', end_at:'2015-02-11 03:00:00',
-	  vote_goal:0, can_select:0};
+	  vote_goal:0, can_select:0, builder_title:''  };
 	
 	
 
@@ -50,6 +50,7 @@ todoApp.controller('TodoCtrl', ['$rootScope', '$scope', '$filter', 'ApiSrv', fun
 		$scope.newVote.end_at = '2015-02-11 03:00:00';
 		$scope.newVote.vote_goal = 0;
 		$scope.newVote.can_select = 0;
+		$scope.newVote.builder_title = '';
 		
 
 	};

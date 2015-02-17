@@ -55,8 +55,8 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'sandy',
-			'username'  => 'sandy',
+			'database'  => 'ntpc',
+			'username'  => 'ntpc',
 			'password'  => '!23456',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',

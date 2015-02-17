@@ -43,6 +43,7 @@ class VoteController extends \BaseController {
 		$vote->end_at=$data['end_at'];
 		$vote->vote_goal=$data['vote_goal'];
 		$vote->can_select=$data['can_select'];
+		$vote->builder_title=$data['builder_title'];
 		$vote->save();
 
 		$arr=[

@@ -34,46 +34,27 @@
                      ng-model="newVote.school_name" />
                      <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
                       ng-model="newVote.vote_title" /> 
-                     <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
+                     <input type="text" class="form-control" placeholder="投票人數...." autofocus required
                        ng-model="newVote.vote_amount" />
-                     <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
+                     <input type="text" class="form-control" placeholder="開始時間...." autofocus required
                         ng-model="newVote.start_at" /> 
-                     <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
+                     <input type="text" class="form-control" placeholder="結束時間...." autofocus required
                          ng-model="newVote.end_at" />
 
-                     <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
+                     <input type="text" class="form-control" placeholder="當選人數...." autofocus required
                        ng-model="newVote.vote_goal" />      
-                     <input type="text" class="form-control" placeholder="投票名稱...." autofocus required
-                         ng-model="newVote.can_select" />                                                  
+                     <input type="text" class="form-control" placeholder="可投票數...." autofocus required
+                         ng-model="newVote.can_select" />  
+
+                     <input type="text" class="form-control" placeholder="建立者職稱...." autofocus required
+                     ng-model="newVote.builder_title" />                                                
                     <input type="submit" ng-click="vote_add(newVote)" />
                 </form>
                 <!-- 輸入表單 end -->
 
 
-                <!-- 工具按鈕 -->
-                <ul class="list-inline">
-                    <li>
-                        <button class="btn btn-primary" ng-click="filterType=null">
-                            全部({{ todos.length || 0 }})
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn btn-primary" ng-click="filterType={done: 0}">
-                            未完成({{ todos.length - dones || 0 }})
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn btn-primary" ng-click="filterType={done:1}">
-                            已完成({{ dones || 0 }})
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn btn-danger" ng-disabled="dones === 0" ng-click="clean()">
-                            清除已完成
-                        </button>
-                    </li>
-                </ul>
-                <!-- 工具按鈕　end -->
+         
+         
             </div>
         </div>
         
@@ -96,7 +77,7 @@
                         
 
                         <span editable-text="vote.vote_title" buttons="no" onbeforesave="vote_update(vote, $data)">
-                            {{ vote.id }} {{ vote.vote_title }}
+                            {{ vote.id }}* {{ vote.school_name }}* {{ vote.vote_title }}*{{ vote.vote_amount }}*{{ vote.start_at }}*{{ vote.end_at }}*{{ vote.vote_goal }}*{{ vote.can_select }}*{{ vote.builder_title }}
                         </span> 
 
                       
