@@ -22,9 +22,18 @@
         
         <div class="page-header text-center">
             <h1>User List</h1>
+
+            <a id="link-1" href ng-click="ngshow()">test_ng-show</a> 
+            {{getUser}}<br />
+
+<!-- 修改部分 -->  
+            <a id="link-1" href ng-click="openid()">openid_login</a> 
+            {{userData}}<br />
+
+<!-- 修改部分end -->
         </div>
 
-        <div class="row top-row">
+        <div class="row top-row" ng-show = "getUser">
             <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
 
 
@@ -61,8 +70,7 @@
 
 
 
-
-<!-- 修改部分 -->        
+      
         <!-- 清單 -->
         <div class="row">
             <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
@@ -88,7 +96,7 @@
         </div>
         <!-- 清單 end -->
 
-<!-- 修改部分end -->
+
 
 
     </div>

@@ -11,17 +11,29 @@
 |
 */
 
-// Route::get('/', function()
-// {
-// 	return View::make('hello');
-// });
+Route::get('/', function()
+{
+	return View::make('hello');
+});
 
 Route::delete('/api/todos/clean', 'TodoController@clean');
 Route::resource('/api/todos', 'TodoController');
 // Route::controller('/api/todos', 'TodoController');
 
 Route::resource('/api/users', 'UserController');
-Route::delete('/api/users/clean', 'UserController@clean');
+//Route::delete('/api/users/clean', 'UserController@clean');
 
 Route::resource('/api/votes', 'VoteController');
-Route::delete('/api/votes/clean', 'VoteController@clean');
+//Route::delete('/api/votes/clean', 'VoteController@clean');
+
+//********************************
+Route::resource('/api/login/openid/', 'AuthController@openIDLogin');
+//Route::delete('/api/votes/clean', 'VoteController@clean');
+//**********************************
+
+Route::get('login/openid', 'AuthController@openIDLogin');
+//Route::get('user/data/show', 'AuthController@showUserData');
+Route::get('user/data/show', 'AuthController@showUserData');
+
+
+

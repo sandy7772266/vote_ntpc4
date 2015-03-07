@@ -10,14 +10,21 @@ todoApp.factory('ApiSrv', ['$rootScope', '$resource', function ($rootScope, $res
 			 	'clean': {method: 'DELETE'}
 			}),
 		user:$resource(
-			'http://127.0.0.1/vote_ntpc/test2/public/api/users/:id:action',
+			'http://127.0.0.1/vote_ntpc4/test2/public/api/users/:id:action',
 			{id: '@id'},
 			{ 
 			 	'update': {method: 'PUT'},
 			 	'clean': {method: 'DELETE'}
 			}),
 		vote:$resource(
-			'http://127.0.0.1/vote_ntpc2/test2/public/api/votes/:id:action',
+			'http://127.0.0.1/vote_ntpc4/test2/public/api/votes/:id:action',
+			{id: '@id'},
+			{ 
+			 	'update': {method: 'PUT'},
+			 	'clean': {method: 'DELETE'}
+			}),
+		openidLogin:$resource(
+			'http://127.0.0.1/vote_ntpc4/test2/public/api/login/openid/:id:action',
 			{id: '@id'},
 			{ 
 			 	'update': {method: 'PUT'},

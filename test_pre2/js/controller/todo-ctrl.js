@@ -9,6 +9,24 @@ todoApp.controller('TodoCtrl', ['$rootScope', '$scope', '$filter', 'ApiSrv', fun
 	  vote_goal:0, can_select:0, builder_title:''  };
 	
 	
+	$scope.ngshow = function(){
+
+		$scope.getUser = true;
+		
+	};
+
+//****************************************
+	$scope.openid = function(){
+
+		
+		ApiSrv.openidLogin.openIDLogin('', function(response){
+			// $scope.todos.push(response.todo);
+			$scope.userData = response;
+			//$rootScope.$broadcast('show-alert', response.flash);
+		});
+		$scope.newTodo.content = '';
+	};
+//*******************************************
 
 	$scope.add = function(todo){
 
